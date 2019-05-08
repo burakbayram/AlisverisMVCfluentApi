@@ -1,0 +1,26 @@
+﻿@using Entity
+@model Musteri
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.AdSoyad, new { @placeHolder = "Kullanici Adi" })
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Sifre, new { @placeHolder = "sifre" })
+    </div>
+    <div>
+        @Html.TextBox("sifreTekrar", null, new { @placeHolder = "sifre tekrar", @type = "password" })
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Telefon, new { @placeHolder = "Telefon" })
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Email, new { @placeHolder= "email" })
+    </div>
+    <div>
+        @Html.TextBoxFor(x => x.Adres, new { @placeHolder = "adres" })
+      
+    </div>
+    <button>Kaydet</button>
+}

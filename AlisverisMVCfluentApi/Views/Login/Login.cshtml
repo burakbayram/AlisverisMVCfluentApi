@@ -1,0 +1,17 @@
+﻿
+@using Entity
+@model  Musteri
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x=>x.MusteriId)
+    @Html.LabelFor(x => x.Email, new { @class = "control-label" })
+    @Html.TextBox("Email", null, new { @class = "form-control" })
+
+
+    @Html.LabelFor(x => x.Sifre, new { @class = "control-label" })
+    @Html.TextBox("Sifre", null, new { @class = "form-control" })
+    <button class="btn btn-primary" >Sign-in</button>
+    @Html.ActionLink("Kayıt Ol","Kayit")
+
+}
